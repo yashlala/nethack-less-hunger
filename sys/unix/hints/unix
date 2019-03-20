@@ -10,11 +10,11 @@
 # and Makefiles.
 
 
-PREFIX=/usr
-HACKDIR=$(PREFIX)/games/lib/$(GAME)dir
+PREFIX=/var/local
+HACKDIR=$(PREFIX)/games/nethack
 INSTDIR=$(HACKDIR)
 VARDIR=$(HACKDIR)
-SHELLDIR=$(PREFIX)/games
+SHELLDIR=/usr/local/stow/nethack/bin
 
 CFLAGS=-O -I../include
 LINK=$(CC)
@@ -23,13 +23,13 @@ WINSRC = $(WINTTYSRC)
 WINOBJ = $(WINTTYOBJ)
 WINLIB = $(WINTTYLIB)
 
-WINTTYLIB=-ltermlib
+WINTTYLIB=-lcurses
 
 CHOWN=chown
 CHGRP=chgrp
 
-GAMEUID  = games
-GAMEGRP  = bin
+GAMEUID  = root
+GAMEGRP  = games
 
 GAMEPERM = 04755
 VARFILEPERM = 0644

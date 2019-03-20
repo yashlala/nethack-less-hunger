@@ -288,14 +288,14 @@
  *
  */
 
-#if defined(UNIX) && !defined(ZLIB_COMP) && !defined(COMPRESS)
-/* path and file name extension for compression program */
-#define COMPRESS "/usr/bin/compress" /* Lempel-Ziv compression */
-#define COMPRESS_EXTENSION ".Z"      /* compress's extension */
-/* An example of one alternative you might want to use: */
-/* #define COMPRESS "/usr/local/bin/gzip" */ /* FSF gzip compression */
-/* #define COMPRESS_EXTENSION ".gz" */       /* normal gzip extension */
-#endif
+/* #if defined(UNIX) && !defined(ZLIB_COMP) && !defined(COMPRESS) */
+/* /1* path and file name extension for compression program *1/ */
+/* #define COMPRESS "/usr/bin/compress" /1* Lempel-Ziv compression *1/ */
+/* #define COMPRESS_EXTENSION ".Z"      /1* compress's extension *1/ */
+/* /1* An example of one alternative you might want to use: *1/ */
+/* /1* #define COMPRESS "/usr/local/bin/gzip" *1/ /1* FSF gzip compression *1/ */
+/* /1* #define COMPRESS_EXTENSION ".gz" *1/       /1* normal gzip extension *1/ */
+/* #endif */
 
 #ifndef COMPRESS
 /* # define ZLIB_COMP */            /* ZLIB for compression */

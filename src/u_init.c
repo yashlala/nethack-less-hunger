@@ -1014,6 +1014,8 @@ ini_inv(struct trobj *trop)
                    || otyp == RIN_AGGRAVATE_MONSTER
                    || otyp == RIN_HUNGER
                    || otyp == WAN_NOTHING
+		   /* everyone starts with a ring of slow digestion */
+		   || otyp == RIN_SLOW_DIGESTION
                    /* orcs start with poison resistance */
                    || (otyp == RIN_POISON_RESISTANCE && Race_if(PM_ORC))
                    /* Monks don't use weapons */
